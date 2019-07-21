@@ -1,2 +1,2 @@
 # travel
-my first project.bro!
+my first project.
