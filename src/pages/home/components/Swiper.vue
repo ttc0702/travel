@@ -6,10 +6,10 @@
                 <img class="swiper-img" :src="item.imgUrl">
             </swiper-slide>
             <!-- Optional controls -->
-            <!--<div class="swiper-pagination" slot="pagination"></div>-->
-            <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
-            <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
-            <div class="swiper-scrollbar"   slot="scrollbar"></div>
+            <div class="swiper-pagination" slot="pagination"></div>
+            <!--<div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>-->
+            <!--<div class="swiper-button-next swiper-button-white" slot="button-next"></div>-->
+            <!--<div class="swiper-scrollbar"   slot="scrollbar"></div>-->
         </swiper>
     </div>
 </template>
@@ -21,10 +21,10 @@
             return {
                 swiperOption: {
                     pagination: '.swiper-pagination',
-                    prevButton: '.swiper-button-prev',
-                    nextButton: '.swiper-button-next',
-                    scrollbar: '.swiper-scrollbar'
-                    // loop: true
+                    // prevButton: '.swiper-button-prev',
+                    // nextButton: '.swiper-button-next',
+                    // scrollbar: '.swiper-scrollbar'
+                    loop: true
                 },
                 swiperList: [
                     {id: '001', imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20196/818f6cc784ae6669b74bbbb255414a53.jpg_750x200_66ca5873.jpg'},
