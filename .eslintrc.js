@@ -30,5 +30,6 @@ module.exports = {
         // 'indent': ['error', 4],
         'no-console': 0,
         'quotes': [2, 'single'], // 强制使用单引号
+        'space-before-function-paren': 0
     }
 };
