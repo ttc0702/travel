@@ -13,7 +13,7 @@ import 'styles/reset.css'
 // 解决移动端一像素边框问题（通过 transform: scale）
 import 'styles/border.css'
 
-import 'styles/iconfont.css'
+// import 'styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
