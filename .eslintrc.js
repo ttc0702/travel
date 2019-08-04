@@ -25,11 +25,12 @@ module.exports = {
         'generator-star-spacing': 'off',
         // allow debugger during development
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-        'semi': [0, 'never'],
+        'semi': [0, 'never'], // 关闭分号限制
         'indent': 0,
-        // 'indent': ['error', 4],
+        // 'indent': [2, 4],
         'no-console': 0,
         'quotes': [2, 'single'], // 强制使用单引号
-        'space-before-function-paren': 0
+        'space-before-function-paren': 0,
+        'keyword-spacing': 0
     }
 };

@@ -33,48 +33,9 @@
 
 <script>
     export default {
-        name: 'Recommend',
+        name: 'HomeRecommend',
         props: {
             list: Array
-        },
-        data() {
-            return {
-                recommendList: [
-                    {
-                        id: '0001',
-                        imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-                        tagUrl: 'https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png',
-                        tagText: '随买随用',
-                        title: '北京欢乐谷',
-                        comment: 72879,
-                        price: 98,
-                        location: '朝阳区',
-                        feature: '亚洲唯一飞行式过山车等你来挑战'
-                    },
-                    {
-                        id: '0002',
-                        imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-                        tagUrl: 'https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png',
-                        tagText: '随买随用',
-                        title: '北京欢乐谷',
-                        comment: 72879,
-                        price: 98,
-                        location: '朝阳区',
-                        feature: ''
-                    },
-                    {
-                        id: '0003',
-                        imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-                        tagUrl: 'https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png',
-                        tagText: '随买随用',
-                        title: '北京欢乐谷',
-                        comment: 72879,
-                        price: 98,
-                        location: '朝阳区',
-                        feature: '亚洲唯一飞行式过山车等你来挑战'
-                    }
-                ]
-            }
         }
     }
 </script>

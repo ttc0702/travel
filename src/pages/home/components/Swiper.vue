@@ -18,7 +18,7 @@
 
 <script>
     export default {
-        name: 'HomeSwiper',
+        name: 'HomeSwiper', // 这一注意不能是 Swiper，因为引入的 vue-awesome-swiper 中已有组件名为 swiper，而 name 是全局 id，重复会导致 bug。
         data() {
             return {
                 swiperOption: {
@@ -34,7 +34,7 @@
             list: Array
         },
         computed: {
-            showSwiper() {
+            showSwiper () {
                 return this.list.length;
             }
         }

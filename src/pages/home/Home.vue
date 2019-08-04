@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <home-header :city="city"></home-header>
+        <home-header></home-header>
         <home-swiper :list="swiperList"></home-swiper>
         <home-icons :list="iconList"></home-icons>
         <home-location></home-location>
@@ -18,6 +18,7 @@
     import HomeWeekend from './components/Weekend.vue'
 
     import axios from 'axios'
+    import {mapState} from 'vuex'
 
     export default {
         name: 'Home',
@@ -31,24 +32,25 @@
         },
         data() {
             return {
-                city: '',
                 swiperList: [],
                 iconList: [],
                 recommendList: [],
-                weekendList: []
+                weekendList: [],
+                lastCity: ''
             }
+        },
+        computed: {
+            ...mapState(['city'])
         },
         methods: {
             getHomeInfo () {
-                axios.get('/api/index.json') // webpack-dev-server 提供了 proxy 代理功能，需要设置 config/index.js
+                axios.get('/api/index.json?city=' + this.city) // webpack-dev-server 提供了 proxy 代理功能，需要设置 config/index.js
                     .then(this.getHomeInfoSucc)
             },
             getHomeInfoSucc (res) {
-                console.log(res)
                 res = res.data
                 if (res.ret && res.data) {
                     const data = res.data
-                    this.city = data.city
                     this.swiperList = data.swiperList
                     this.iconList = data.iconList
                     this.recommendList = data.recommendList
@@ -57,7 +59,15 @@
             }
         },
         mounted () {
+            this.lastCity = this.city
             this.getHomeInfo()
+        },
+        // 当组件在 <keep-alive> 内被切换，它的 activated 和 deactivated 这两个生命周期钩子函数将会被对应执行。
+        activated() {
+            if(this.lastCity !== this.city) {
+                this.lastCity = this.city
+                this.getHomeInfo()
+            }
         }
     }
 </script>
