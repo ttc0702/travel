@@ -39,7 +39,8 @@
             content: "\e7f3";
         }
         .list-desc:before {
-            content: "\e8ce";;
+            content: "\e8ce";
+            color: #999;
         }
     }
 </style>

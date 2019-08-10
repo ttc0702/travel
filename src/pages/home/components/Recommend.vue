@@ -1,31 +1,29 @@
 <template>
     <div class="recommend">
-        <div class="group-title">
+        <div class="recommend-title">
             <img src="http://img1.qunarzz.com/piao/fusion/1711/89/ebc329f16c55bb02.png" alt="喜欢" class="title-icon">
             <span class="title">猜你喜欢</span>
         </div>
         <ul class="recommend-list">
-            <li :class="['recommend-item', {'border-bottom': index < list.length - 1}]" v-for="(item, index) of list" :key="item.id">
-                <a href="javascript:">
-                    <div class="recommend-img">
-                        <img :src="item.imgUrl" alt="">
+            <router-link :class="['recommend-item', {'border-bottom': index < list.length - 1}]" v-for="(item, index) of list" :key="item.id" tag="li" :to="'/detail/' + item.id">
+                <div class="item-img">
+                    <img :src="item.imgUrl" alt="">
+                </div>
+                <div class="item-tag" :style="'background-image:url(' + item.tagUrl + ')'">{{item.tagText}}</div>
+                <div class="item-info">
+                    <div class="item-title">{{item.title}}</div>
+                    <div class="item-comment">
+                        <i class="iconfont">&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;</i>
+                        <span class="comment">{{item.comment}}条评论</span>
                     </div>
-                    <div class="recommend-tag" :style="'background-image:url(' + item.tagUrl + ')'">{{item.tagText}}</div>
-                    <div class="recommend-info">
-                        <div class="recommend-title">{{item.title}}</div>
-                        <div class="recommend-comment">
-                            <i class="iconfont">&#xe64b;&#xe64b;&#xe64b;&#xe64b;&#xe64b;</i>
-                            <span class="comment">{{item.comment}}条评论</span>
-                        </div>
-                        <div class="recommend-price">
-                            <span class="price">¥<em>{{item.price}}</em>
-                            </span>起
-                            <span class="location">{{item.location}}</span>
-                        </div>
-                        <div class="recommend-feature" v-if="item.feature !== ''">{{item.feature}}</div>
+                    <div class="item-price">
+                        <span class="price">¥<em>{{item.price}}</em>
+                        </span>起
+                        <span class="location">{{item.location}}</span>
                     </div>
-                </a>
-            </li>
+                    <div class="item-feature" v-if="item.feature !== ''">{{item.feature}}</div>
+                </div>
+            </router-link>
         </ul>
         <a class="recommend-more border-top" href="javascript:">查看所有产品</a>
     </div>
@@ -45,7 +43,7 @@
     .recommend {
         margin-top: .2rem;
         background-color: #fff;
-        .group-title {
+        .recommend-title {
             height: .92rem;
             line-height: .92rem;
             .title-icon {
@@ -64,81 +62,78 @@
                 position: relative;
                 padding-top: .2rem;
                 padding-bottom: .2rem;
-                a {
-                    color: #222;
-                    .recommend-img {
-                        float: left;
-                        width: 2rem;
-                        height: 2rem;
-                        img {
-                            width: 100%;
-                        }
+                .item-img {
+                    float: left;
+                    width: 2rem;
+                    height: 2rem;
+                    img {
+                        width: 100%;
                     }
-                    .recommend-tag {
-                        position: absolute;
-                        top: .2rem;
-                        left: 0;
-                        width: 1.1rem;
-                        height: .36rem;
-                        -webkit-background-size: cover;
-                        background-size: cover;
-                        color: #fff;
-                        line-height: .36rem;
-                        text-align: center;
-                        font-size: .24rem;
+                }
+                .item-tag {
+                    position: absolute;
+                    top: .2rem;
+                    left: 0;
+                    width: 1.1rem;
+                    height: .36rem;
+                    -webkit-background-size: cover;
+                    background-size: cover;
+                    color: #fff;
+                    line-height: .36rem;
+                    text-align: center;
+                    font-size: .24rem;
+                }
+                .item-info {
+                    overflow: hidden;
+                    /*float: left;*/
+                    padding-left: .22rem;
+                    .item-title {
+                        margin-top: .26rem;
+                        font-size: .32rem;
+                        line-height: .44rem;
                     }
-                    .recommend-info {
-                        overflow: hidden;
-                        /*float: left;*/
-                        padding-left: .22rem;
-                        .recommend-title {
-                            margin-top: .26rem;
-                            font-size: .32rem;
-                            line-height: .44rem;
-                        }
-                        .recommend-comment {
-                            margin-top: .14rem;
-                            height: .34rem;
-                            .iconfont {
-                                font-size: .24rem;
-                                color: #ffb436;
-                                vertical-align: top;
-                            }
-                            .comment {
-                                margin-left: .12rem;
-                                font-size: .24rem;
-                                color: #666;
-                            }
-                        }
-                        .recommend-price {
-                            margin-top: .22rem;
-                            height: .46rem;
-                            .price {
-                                color: #ff8300;
-                                em {
-                                    font-size: .4rem;
-                                }
-                            }
-                            .location {
-                                float: right;
-                                padding-top: .2rem;
-                                padding-right: .2rem;
-                                font-size: .24rem;
-                                color: #666;
-                            }
-                        }
-                        .recommend-feature {
-                            max-width: 4rem;
-                            display: inline-block;
-                            margin-top: .48rem;
-                            background-color: #fff9f9;
-                            color: #f55;
+                    .item-comment {
+                        margin-top: .14rem;
+                        height: .34rem;
+                        .iconfont {
                             font-size: .24rem;
-                            padding: .04rem .1rem;
-                            height: .34rem;
-                            line-height: .36rem;
-                            .ellipse;
+                            color: #ffb436;
+                            vertical-align: top;
                         }
+                        .comment {
+                            margin-left: .12rem;
+                            font-size: .24rem;
+                            color: #666;
+                        }
+                    }
+                    .item-price {
+                        margin-top: .22rem;
+                        height: .46rem;
+                        .price {
+                            color: #ff8300;
+                            em {
+                                font-size: .4rem;
+                            }
+                        }
+                        .location {
+                            float: right;
+                            padding-top: .2rem;
+                            padding-right: .2rem;
+                            font-size: .24rem;
+                            color: #666;
+                        }
+                    }
+                    .item-feature {
+                        max-width: 4rem;
+                        display: inline-block;
+                        margin-top: .48rem;
+                        background-color: #fff9f9;
+                        color: #f55;
+                        font-size: .24rem;
+                        padding: .04rem .1rem;
+                        height: .34rem;
+                        line-height: .36rem;
+                        .ellipse;
                     }
                 }
             }

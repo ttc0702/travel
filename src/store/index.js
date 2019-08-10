@@ -13,5 +13,9 @@ export default new Vuex.Store({
     //     }
     // },
     mutations,
-    getters: {} // 类似组件中的 computed
+    getters: {
+        // doubleCity(state) {
+        //     return state.city + ' ' + state.city
+        // }
+    } // 类似组件中的 computed
 })

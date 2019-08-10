@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'babel-polyfill' // 解决部分机型不支持 es6 promise，导致首页白屏的问题
+
 import store from './store/index.js'
 
 // 解决移动端300毫秒点击延迟问题
@@ -14,7 +16,7 @@ import 'styles/reset.css'
 // 解决移动端一像素边框问题（通过 transform: scale）
 import 'styles/border.css'
 
-// import 'styles/iconfont.css'
+import 'styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false

@@ -1,5 +1,6 @@
 <template>
     <div class="wrapper">
+        <!--v-if="showSwiper" 保证先获取完数据再显示轮播图，使轮播图默认显示第一章图片-->
         <swiper :options="swiperOption" v-if="showSwiper">
             <!-- slides -->
             <swiper-slide v-for="item of list" :key="item.id">

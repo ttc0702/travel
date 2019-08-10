@@ -54,7 +54,6 @@
                 } else if (letter === '热门') {
                     letter = 'hot'
                 }
-                console.log(letter)
                 this.$emit('change', letter)
             },
             handleTouchStart() {

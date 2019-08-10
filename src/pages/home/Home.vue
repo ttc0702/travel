@@ -4,6 +4,7 @@
         <home-swiper :list="swiperList"></home-swiper>
         <home-icons :list="iconList"></home-icons>
         <home-location></home-location>
+        <home-hot :list="hotList"></home-hot>
         <home-recommend :list="recommendList"></home-recommend>
         <home-weekend :list="weekendList"></home-weekend>
     </div>
@@ -14,6 +15,7 @@
     import HomeSwiper from './components/Swiper.vue'
     import HomeIcons from './components/Icons.vue'
     import HomeLocation from './components/Location.vue'
+    import HomeHot from './components/Hot.vue'
     import HomeRecommend from './components/Recommend.vue'
     import HomeWeekend from './components/Weekend.vue'
 
@@ -27,6 +29,7 @@
             HomeSwiper,
             HomeIcons,
             HomeLocation,
+            HomeHot,
             HomeRecommend,
             HomeWeekend
         },
@@ -34,6 +37,7 @@
             return {
                 swiperList: [],
                 iconList: [],
+                hotList: [],
                 recommendList: [],
                 weekendList: [],
                 lastCity: ''
@@ -44,7 +48,7 @@
         },
         methods: {
             getHomeInfo () {
-                axios.get('/api/index.json?city=' + this.city) // webpack-dev-server 提供了 proxy 代理功能，需要设置 config/index.js
+                axios.get('/static/mock/index.json?city=' + this.city) // webpack-dev-server 提供了 proxy 代理功能，需要设置 config/index.js
                     .then(this.getHomeInfoSucc)
             },
             getHomeInfoSucc (res) {
@@ -53,6 +57,7 @@
                     const data = res.data
                     this.swiperList = data.swiperList
                     this.iconList = data.iconList
+                    this.hotList = data.hotList
                     this.recommendList = data.recommendList
                     this.weekendList = data.weekendList
                 }
