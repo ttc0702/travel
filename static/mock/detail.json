@@ -1,0 +1,129 @@
+{
+  "ret": true,
+  "data": {
+    "sightName": "北京欢乐谷(AAAA景区)",
+    "bannerImg": "http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_600x330_93d96bdf.jpg",
+    "galleryImgs": [
+      "http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_r_800x800_087730c7.jpg",
+      "http://img1.qunarzz.com/sight/p0/1906/e7/e7276de002459b50a3.img.jpg_r_800x800_5cdd4127.jpg"
+    ],
+    "categoryList": [
+      {
+        "title": "门票",
+        "iconUrl": "http://s.qunarzz.com/piao/image/touch/sight/detail.png",
+        "children": [
+          {
+            "title": "[全天]成人票",
+            "price": 290,
+            "icon": true,
+            "children": [
+              {
+                "title": "北京欢乐谷（全天）门票成人票(6.28-11.17)",
+                "price": 295
+              },
+              {
+                "title": "[日场+夜场通玩，刷身份证入园] 北京欢乐谷全天票",
+                "price": 290
+              },
+              {
+                "title": "北京欢乐谷（全天）门票成人票",
+                "price": 293
+              }
+            ]
+          },
+          {
+            "title": "[夜场]成人票",
+            "price": 194,
+            "icon": true,
+            "children": []
+          },
+          {
+            "title": "[全天]儿童票",
+            "price": 194,
+            "icon": true,
+            "children": []
+          },
+          {
+            "title": "[全天]重游成人票（买一次送一次）",
+            "price": 325,
+            "icon": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "title": "活动票",
+        "iconUrl": "http://s.qunarzz.com/piao/image/touch/sight/detail.png",
+        "children": [
+          {
+            "title": "[全天]中高考考生专享票",
+            "price": 199,
+            "icon": true,
+            "children": []
+          },
+          {
+            "title": "奥运周年夜场票",
+            "price": 88,
+            "icon": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "title": "蹦床馆",
+        "iconUrl": "http://s.qunarzz.com/piao/image/touch/sight/detail.png",
+        "children": [
+          {
+            "title": "成人票",
+            "price": 128,
+            "icon": true,
+            "children": []
+          },
+          {
+            "title": "儿童票",
+            "price": 288,
+            "icon": true,
+            "children": []
+          },
+          {
+            "title": "[夜场]成人票",
+            "price": 88,
+            "icon": true,
+            "children": []
+          },
+          {
+            "title": "亲子票（1大1小）",
+            "price": 188,
+            "icon": true,
+            "children": []
+          },
+          {
+            "title": "家庭票（2大1小）",
+            "price": 288,
+            "icon": true,
+            "children": []
+          }
+
+        ]
+      },
+      {
+        "title": "年卡",
+        "iconUrl": "http://s.qunarzz.com/piao/image/touch/sight/detail.png",
+        "children": [
+          {
+            "title": "单人年卡",
+            "price": 699,
+            "icon": true,
+            "children": []
+          },
+          {
+            "title": "花橙畅游卡成人票",
+            "price": 460,
+            "icon": true,
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
