@@ -55,21 +55,21 @@
       {
         "id": "0001",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_250x250_0fc722c0.jpg",
-        "tagUrl": "../../../../static/images/top1.png",
+        "tagUrl": "https://ttc0702.github.io/travel/static/images/top1.png",
         "title": "故宫",
         "price": 60
       },
       {
         "id": "0002",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_250x250_50c99cf3.jpg",
-        "tagUrl": "../../../../static/images/top2.png",
+        "tagUrl": "https://ttc0702.github.io/travel/static/images/top2.png",
         "title": "八达岭长城",
         "price": 40
       },
       {
         "id": "0003",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_250x250_d852635b.jpg",
-        "tagUrl": "../../../../static/images/top3.png",
+        "tagUrl": "https://ttc0702.github.io/travel/static/images/top3.png",
         "title": "颐和园",
         "price": 38
       },
@@ -91,7 +91,7 @@
     "recommendList": [{
         "id": "0001",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg",
-        "tagUrl": "../../../../static/images/today.png",
+        "tagUrl": "https://ttc0702.github.io/travel/static/images/today.png",
         "tagText": "随买随用",
         "title": "北京欢乐谷",
         "comment": 72879,
@@ -101,7 +101,7 @@
       }, {
         "id": "0002",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1903/5d/5dcaf453dfd6f5dba3.img.jpg_200x200_51d03f19.jpg",
-        "tagUrl": "../../../../static/images/today.png",
+        "tagUrl": "https://ttc0702.github.io/travel/static/images/today.png",
         "tagText": "随买随用",
         "title": "古北水镇",
         "comment": 11060,
