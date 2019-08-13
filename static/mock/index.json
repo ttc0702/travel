@@ -55,21 +55,21 @@
       {
         "id": "0001",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_250x250_0fc722c0.jpg",
-        "tagUrl": "https://ttc0702.github.io/travel/static/images/top1.png",
+        "tagUrl": "http://img1.qunarzz.com/piao/fusion/1710/ab/159673b63e6ca702.png",
         "title": "故宫",
         "price": 60
       },
       {
         "id": "0002",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_250x250_50c99cf3.jpg",
-        "tagUrl": "https://ttc0702.github.io/travel/static/images/top2.png",
+        "tagUrl": "http://img1.qunarzz.com/piao/fusion/1710/2d/36d0c4adaebbbc02.png",
         "title": "八达岭长城",
         "price": 40
       },
       {
         "id": "0003",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_250x250_d852635b.jpg",
-        "tagUrl": "https://ttc0702.github.io/travel/static/images/top3.png",
+        "tagUrl": "http://img1.qunarzz.com/piao/fusion/1710/67/edc47ffef9e96b02.png",
         "title": "颐和园",
         "price": 38
       },
@@ -91,7 +91,7 @@
     "recommendList": [{
         "id": "0001",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg",
-        "tagUrl": "https://ttc0702.github.io/travel/static/images/today.png",
+        "tagUrl": "http://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png",
         "tagText": "随买随用",
         "title": "北京欢乐谷",
         "comment": 72879,
@@ -101,7 +101,7 @@
       }, {
         "id": "0002",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1903/5d/5dcaf453dfd6f5dba3.img.jpg_200x200_51d03f19.jpg",
-        "tagUrl": "https://ttc0702.github.io/travel/static/images/today.png",
+        "tagUrl": "http://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png",
         "tagText": "随买随用",
         "title": "古北水镇",
         "comment": 11060,
@@ -111,7 +111,7 @@
       }, {
         "id": "0003",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg",
-        "tagUrl": "../../../../static/images/tomorrow.png",
+        "tagUrl": "http://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png",
         "tagText": "可定明日",
         "title": "故宫",
         "comment": 432470,
@@ -121,7 +121,7 @@
       }, {
         "id": "0004",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_200x200_2458ffb2.jpg",
-        "tagUrl": "../../../../static/images/today.png",
+        "tagUrl": "http://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png",
         "tagText": "随买随用",
         "title": "八达岭长城",
         "comment": 56487,
@@ -131,7 +131,7 @@
       }, {
         "id": "0005",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/201308/08/41150dacc0e3a0c8c8d65eac.jpg_200x200_c62292e9.jpg",
-        "tagUrl": "../../../../static/images/tomorrow.png",
+        "tagUrl": "http://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png",
         "tagText": "可定明日",
         "title": "北京动物园",
         "comment": 8681,
