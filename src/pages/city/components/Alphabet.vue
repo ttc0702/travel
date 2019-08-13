@@ -24,6 +24,7 @@
             }
         },
         updated() {
+            // 页面初始渲染时没有数据，ajax 获取到数据时触发 updated
             this.startY = this.$refs.current.offsetTop
         },
         computed: {
