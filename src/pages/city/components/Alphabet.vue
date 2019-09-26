@@ -1,5 +1,11 @@
 <template>
-    <div class="alphabet" @click="handleLetterClick" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd">
+    <div
+        class="alphabet"
+        @click="handleLetterClick"
+        @touchstart="handleTouchStart"
+        @touchmove="throttle(handleTouchMove, 50, $event)"
+        @touchend="handleTouchEnd"
+    >
         <ul class="alphabet-demostic" v-if="active">
             <li class="item" ref="current">当前</li>
             <li class="item">热门</li>
@@ -61,12 +67,10 @@
                 this.touchStatus = true
             },
             handleTouchMove(e) {
-                if (this.touchStatus) {
-                    // 利用定时器实现函数节流：
-                    if (this.timer) {
-                        clearTimeout(this.timer)
-                    }
-                    this.timer = setTimeout(() => {
+                // 利用定时器实现函数节流：
+                // if (this.timer) return
+                // this.timer = setTimeout(() => {
+                    if (this.touchStatus) {
                         const touchY = e.touches[0].clientY - 123
                         const index = Math.floor((touchY - this.startY) / 16)
                         let letter = ''
@@ -78,8 +82,18 @@
                             letter = this.letters[index - 2]
                         }
                         this.$emit('change', letter)
-                    }, 16)
-                }
+                        // this.timer = null
+                    }
+                // }, 50)
+            },
+
+            // 利用定时器实现函数节流：
+            throttle(func, delay, e) {
+                if (this.timer) return
+                this.timer = setTimeout(() => {
+                    func.call(this, e)
+                    this.timer = null
+                }, delay)
             },
             handleTouchEnd() {
                 this.touchStatus = false
@@ -89,20 +103,20 @@
 </script>
 
 <style scoped lang="less">
-    .alphabet {
-        position: absolute;
-        top: 2.46rem;
-        right: 0;
-        width: .52rem;
-        padding: .26rem 0;
-        background-color: rgba(100, 100, 100, .1);
-        border-radius: .26rem;
-        color: #079fde;
-        font-size: .24rem;
-        .item {
-            /*height: .32rem;*/
-            line-height: .32rem;
-            text-align: center;
-        }
+.alphabet {
+    position: absolute;
+    top: 2.46rem;
+    right: 0;
+    width: 0.52rem;
+    padding: 0.26rem 0;
+    background-color: rgba(100, 100, 100, 0.1);
+    border-radius: 0.26rem;
+    color: #079fde;
+    font-size: 0.24rem;
+    .item {
+        /*height: .32rem;*/
+        line-height: 0.32rem;
+        text-align: center;
     }
+}
 </style>

@@ -41,7 +41,7 @@
         },
         methods: {
             getCityInfo () {
-                axios.get('/static/mock/city.json') // webpack-dev-server 提供了 proxy 代理功能，需要设置 config/index.js
+                axios.get('api/city.json') // webpack-dev-server 提供了 proxy 代理功能，需要设置 config/index.js
                     .then(this.getCityInfoSucc)
             },
             getCityInfoSucc (res) {
